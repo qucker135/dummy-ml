@@ -17,6 +17,7 @@ class LinearLayer(Layer):
     
     def forward(self, inp: np.ndarray):
         assert len(inp.shape) == 1 and inp.shape[0] == self.weights.shape[0]
+        self.inp = inp
         self.z = np.matmul(inp, self.weights) + self.biases
         self.output = self.activation.compute(self.z)
 
