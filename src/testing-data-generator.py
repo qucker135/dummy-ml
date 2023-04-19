@@ -14,8 +14,7 @@ def label(data: np.ndarray):
     
     return np.insert(data.copy(), data.shape[1], values, axis=1)
 
-unlabeled_data = np.random.uniform(0.0, 1.0, (100,2))
-#print(unlabeled_data)
+unlabeled_data = np.random.uniform(0.0, 1.0, (1000,2))
 labeled_data = label(unlabeled_data)
 print(labeled_data)
 
